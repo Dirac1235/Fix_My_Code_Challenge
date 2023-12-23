@@ -16,20 +16,12 @@ ARGV.each do |arg|
     is_inserted = false
     i = 0
     l = result.size
+
     while !is_inserted && i < l do
-        puts "---i-"
-        puts i_arg
-        puts "------"
-        if result[i] < i_arg && i != 0
-          i += 1
-          puts "i arg is greater"
-          puts result[i]
-          puts "--"
+        if  result[i] < i_arg 
+            i += 1
         else
             result.insert(i, i_arg)
-            puts "-- r -"
-            puts result[i-1]
-            puts "----"
             is_inserted = true
             break
         end
